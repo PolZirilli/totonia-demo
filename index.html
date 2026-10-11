@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Totonia Demo Online</title>
+  <meta name="description" content="Demo online de Totonia para Sega Genesis / Mega Drive.">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <main class="page-shell" aria-label="Totonia demo online">
+    <section class="desktop-artboard" aria-label="Escenario desktop de Totonia">
+      <div class="screen-slot" aria-label="Pantalla del juego">
+        <img class="screen-poster" src="./assets/screen-poster.png" alt="Vista previa del juego Totonia"
+          draggable="false">
+        <div id="game" class="emulator-mount" aria-label="Emulador de Totonia"></div>
+      </div>
+
+      <img class="art-overlay" src="./assets/desktop-master.png" alt="" aria-hidden="true" draggable="false">
+
+      <img class="art-master" src="./assets/desktop-master.png" alt="" aria-hidden="true" draggable="false">
+    </section>
+  </main>
+
+  <script src="./js/Genesis.min.js"></script>
+  <script src="./js/gamepad-mappings.js"></script>
+  <script src="./app.js"></script>
+</body>
+
+</html>
