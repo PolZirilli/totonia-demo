@@ -1,0 +1,29 @@
+{
+  "master": {
+    "width": 1672,
+    "height": 941,
+    "aspectRatio": 1.7768331562167907
+  },
+  "screen": {
+    "x": 689,
+    "y": 157,
+    "width": 767,
+    "height": 574,
+    "radius": 48,
+    "leftPct": 0.41208133971291866,
+    "topPct": 0.16684378320935175,
+    "widthPct": 0.45873205741626794,
+    "heightPct": 0.6099893730074389,
+    "radiusPctOfWidth": 0.06258148631029987
+  },
+  "generated": {
+    "overlay": "assets/desktop-overlay-screen-hole.png",
+    "poster": "assets/screen-poster.png",
+    "master": "assets/desktop-master.png",
+    "reconstructedCheck": "assets/reconstructed-check.png",
+    "debug": "assets/screen-rect-debug.png"
+  },
+  "reconstruction": {
+    "diffBBox": null
+  }
+}
