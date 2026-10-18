@@ -5,16 +5,15 @@
     "aspectRatio": 1.7768331562167907
   },
   "screen": {
-    "x": 689,
-    "y": 157,
-    "width": 767,
-    "height": 574,
-    "radius": 48,
-    "leftPct": 0.41208133971291866,
-    "topPct": 0.16684378320935175,
-    "widthPct": 0.45873205741626794,
-    "heightPct": 0.6099893730074389,
-    "radiusPctOfWidth": 0.06258148631029987
+    "x": 665,
+    "y": 162,
+    "width": 758,
+    "height": 527,
+    "leftPct": 0.3977272727272727,
+    "topPct": 0.17215727948990436,
+    "widthPct": 0.4533492822966507,
+    "heightPct": 0.5600425079702445,
+    "shape": "TV-glass aperture; foreground alpha preserves frame and Toto silhouette"
   },
   "generated": {
     "overlay": "assets/desktop-overlay-screen-hole.png",
