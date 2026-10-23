@@ -269,3 +269,34 @@ gameMount?.addEventListener("pointerdown", focusEmulatorCanvas);
 window.addEventListener("beforeunload", stopGamepadPolling);
 
 loadRom();
+
+// Desbloqueo de audio: Genesis.min.js crea el AudioContext al cargar, sin gesto
+// del usuario, y solo lo reanuda en touchstart. En escritorio queda "suspended".
+const audioHint = document.createElement("div");
+audioHint.className = "audio-hint";
+audioHint.textContent = "Toca o presiona una tecla para activar el sonido";
+audioHint.hidden = true;
+document.body.appendChild(audioHint);
+
+const audioSuspended = () => {
+  const ctx = window.GENESIS_AUDIO_CONTEXT;
+  return Boolean(ctx) && ctx.state === "suspended";
+};
+
+const unlockAudio = () => {
+  const ctx = window.GENESIS_AUDIO_CONTEXT;
+  if (!ctx || ctx.state !== "suspended") {
+    return;
+  }
+  ctx.resume().catch(() => {});
+  window.GENESIS_NEXT_AUDIO_TIME = 0;
+  window.GENESIS_AUDIO_START_TIME = null;
+};
+
+["pointerdown", "keydown", "touchstart"].forEach((type) => {
+  window.addEventListener(type, unlockAudio, { capture: true });
+});
+
+setInterval(() => {
+  audioHint.hidden = !(emulatorRunning && audioSuspended());
+}, 500);
