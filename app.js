@@ -50,7 +50,7 @@ window.TotoniaDemo = {
   artboard,
   gameMount,
   mountSelector: "#game",
-  romUrl: "./rom/totonia-demo.bin?v=20261102",
+  romUrl: "https://pub-ff7c663c84454806bb4ffd91e4b89a48.r2.dev/demo/totonia-demo.bin",
   emulator: {
     engine: "Genesis.js",
     core: "PicoDrive",
